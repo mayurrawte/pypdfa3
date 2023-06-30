@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pypdfa3-zugferd"
+version = "0.1.0"
+description = "Pythonfastapi to convert pdf to zugferd format"
+authors = ["Mayur Rawte <rawte.mayur@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.98.0"
+uvicorn = "^0.22.0"
+python-multipart = "^0.0.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
