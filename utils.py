@@ -28,8 +28,8 @@ async def save_temp_file(file_data: bytes, file_extension: str, folder: str) -> 
     return temp_file_path
 
 
-async def create_post_script_file(xml_file_path: str, session_id):
-     content = ps_content_template.format(xml_path=xml_file_path, xml_filename='invoice.xml', gs_version=get_gs_version())
+async def create_post_script_file(xml_file_path: str, session_id,xml_file_name=None):
+     content = ps_content_template.format(xml_path=xml_file_path, xml_filename=xml_file_name or 'invoice.xml', gs_version=get_gs_version())
      return await save_temp_file(content.encode('utf-8'), '.ps', session_id)
 
 def get_gs_version():
